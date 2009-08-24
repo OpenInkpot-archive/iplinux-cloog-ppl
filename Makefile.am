@@ -41,11 +41,11 @@ SUBDIRS = . doc test
 ACLOCAL_AMFLAGS = -I m4
 
 bin_PROGRAMS = cloog
-lib_LTLIBRARIES = libcloog.la
+lib_LTLIBRARIES = libcloog-ppl.la
 
 INCLUDES = -I$(top_builddir)/include -I$(top_srcdir)/include
 AM_CFLAGS = -Wall -fomit-frame-pointer
-libcloog_la_SOURCES = \
+libcloog_ppl_la_SOURCES = \
 	source/block.c \
 	source/loop.c \
 	source/names.c \
@@ -58,7 +58,7 @@ libcloog_la_SOURCES = \
 	source/program.c \
 	source/statement.c \
 	source/version.c
-LDADD = libcloog.la
+LDADD = libcloog-ppl.la -lstdc++
 cloog_SOURCES = source/cloog.c
 
 pkginclude_HEADERS = \
