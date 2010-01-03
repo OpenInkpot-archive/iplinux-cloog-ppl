@@ -1,14 +1,12 @@
 Source: cloog-ppl
 Priority: optional
-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
-Uploaders: Matthias Klose <doko@debian.org>
+Maintainer: Mikhail Gusarov <dottedmag@dottedmag.net>
 Build-Depends: debhelper (>= 5), autotools-dev, libppl0.10-dev, libgmp3-dev, texinfo
 Standards-Version: 3.8.3
-Section: libs
+Section: host/tools
 Homepage: http://www.CLooG.org
 
 Package: libcloog-ppl-dev
-Section: libdevel
 Architecture: any
 Depends: libppl0.10-dev, libgmp3-dev, libcloog-ppl0 (= ${binary:Version}), dpkg (>= 1.15.4) | install-info, ${shlibs:Depends}, ${misc:Depends}
 Description: the Chunky Loop Generator (development files)
@@ -20,7 +18,6 @@ Description: the Chunky Loop Generator (development files)
  This package contains the development files and the cloog binary.
 
 Package: libcloog-ppl0
-Section: libs
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: the Chunky Loop Generator (runtime library)
